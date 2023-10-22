@@ -4,6 +4,7 @@ services:
     build:
       context: .  # Use the current directory as the context
       dockerfile: Dockerfile  # Specify the name of your Dockerfile if it's different
+    image: dockload:latest
     environment:
       - PORT=8080
       - ID=SERVER_ONE
