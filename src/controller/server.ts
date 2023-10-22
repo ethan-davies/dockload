@@ -22,7 +22,7 @@ export default class Server {
                 console.log(
                     `[CONTROLLER] Connected to ${server.ip}:${server.port}`
                 )
-                ws.send(`this is the controller`)
+                ws.send(JSON.stringify({ test: 'should not handle' }))
                 resolve() // Resolve the promise when the connection is established.
             })
 
