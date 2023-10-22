@@ -1,0 +1,24 @@
+{
+  "name": "docker-workers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "workers",
+    "docker"
+  ],
+  "author": "Ethan Davies",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.2.2",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.8"
+  }
+}
