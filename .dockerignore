@@ -1,0 +1,18 @@
+# Exclude development and build-related files and directories
+node_modules
+npm-debug.log
+yarn-error.log
+.git
+*.md
+*.map
+*.ts
+*.tsbuildinfo
+
+# Exclude local environment files (e.g., .env)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Exclude any other files or directories specific to your project

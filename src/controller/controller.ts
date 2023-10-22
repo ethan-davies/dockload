@@ -8,13 +8,15 @@ export default class Controller {
 
     public static async initialize() {
         console.log('Initializing controller')
-        this.serverOne = new Server('localhost', 8080, 0, null)
-        this.serverTwo = new Server('localhost', 8081, 5, null)
-        this.serverThree = new Server('localhost', 8082, 3, null)
+        this.serverOne = new Server('localhost', 8080, 1, null)
+        this.serverTwo = new Server('localhost', 8081, 10, null)
+        this.serverThree = new Server('localhost', 8082, 11, null)
         this.servers = [this.serverOne, this.serverTwo, this.serverThree]
 
         try {
             await Server.connectToServer(this.serverOne)
+            await Server.connectToServer(this.serverTwo)
+            await Server.connectToServer(this.serverThree)
             await this.sendWorkToServer(Controller.servers, {"ping": "@"})
         } catch (error) {
             console.log(`Failed to connect to server`)

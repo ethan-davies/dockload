@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "controller": "node /dist/controller/controller.js"
   },
   "keywords": [
     "workers",
@@ -15,6 +15,7 @@
   "author": "Ethan Davies",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "typescript": "^5.2.2",
     "ws": "^8.14.2"
   },

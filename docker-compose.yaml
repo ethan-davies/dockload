@@ -1,0 +1,46 @@
+version: '3'
+services:
+  server_one:
+    build:
+      context: .  # Use the current directory as the context
+      dockerfile: Dockerfile  # Specify the name of your Dockerfile if it's different
+    environment:
+      - PORT=8080
+      - ID=SERVER_ONE
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src/server:/app/src/server  # Mount the TypeScript source code for the server
+    networks:
+      - workers
+
+  server_two:
+    build:
+      context: .  # Use the current directory as the context
+      dockerfile: Dockerfile  # Specify the name of your Dockerfile if it's different
+    environment:
+      - PORT=8081
+      - ID=SERVER_TWO
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./src/server:/app/src/server  # Mount the TypeScript source code for the server
+    networks:
+      - workers
+
+  server_three:
+    build:
+      context: .  # Use the current directory as the context
+      dockerfile: Dockerfile  # Specify the name of your Dockerfile if it's different
+    environment:
+      - PORT=8082
+      - ID=SERVER_THREE
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./src/server:/app/src/server  # Mount the TypeScript source code for the server
+    networks:
+      - workers
+
+networks:
+  workers:
